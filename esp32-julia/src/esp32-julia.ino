@@ -1,5 +1,6 @@
 /* ESP32 MODELO
 */
+int variavel = 10;
 
 void setup() {
   //Código que será executado apenas uma vez
