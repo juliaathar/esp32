@@ -1,15 +1,18 @@
 /* ESP32 MODELO
 */
-int variavel = 10;
+
+#define LED_PIN 26 
 
 void setup() {
-  //Código que será executado apenas uma vez
   Serial.begin(115200);
-  Serial.println("ESP32 rocks!");
+  pinMode(LED_PIN, OUTPUT);  
 }
 
 void loop() {
-  //Código que será executado continuamente
-  Serial.println("Disciplina AICSS");
-  delay(2000);
+  digitalWrite(LED_PIN, HIGH);  
+  delay(500);
+  Serial.println("LED ACESO");                 
+  digitalWrite(LED_PIN, LOW); 
+  delay(500);  
+  Serial.println("LED APAGADO");               
 }
