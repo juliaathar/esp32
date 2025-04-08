@@ -1,18 +1,22 @@
-/* ESP32 MODELO
-*/
+#include <cstring>
 
-#define LED_PIN 26 
+//exercicio 1 & 2
+char arraydeChar[10]= "char";
+int tamanhoArray = strlen(arraydeChar);
+
+//exercicio 3
+
 
 void setup() {
-  Serial.begin(115200);
-  pinMode(LED_PIN, OUTPUT);  
-}
+  Serial.begin(9600);
 
-void loop() {
-  digitalWrite(LED_PIN, HIGH);  
-  delay(500);
-  Serial.println("LED ACESO");                 
-  digitalWrite(LED_PIN, LOW); 
-  delay(500);  
-  Serial.println("LED APAGADO");               
+   //exercicio 1
+    Serial.print("O tamanho da minha var é: "+ String(tamanhoArray));
+
+  //exercicio 2
+    Serial.print("Conteúdo da minha var: "+ String(arraydeChar) + "O tamanho da minha var é: "+ String(tamanhoArray));
+}
+ 
+void loop(){
+ 
 }
